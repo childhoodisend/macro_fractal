@@ -1,3 +1,0 @@
-/home/pahpan/Rep/macro_fractal/calculator/cmake-build-release/CMakeFiles/rebuild_cache.dir
-/home/pahpan/Rep/macro_fractal/calculator/cmake-build-release/CMakeFiles/edit_cache.dir
-/home/pahpan/Rep/macro_fractal/calculator/cmake-build-release/CMakeFiles/macro-fractal-calculator.dir
