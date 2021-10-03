@@ -1,7 +1,5 @@
 FROM ubuntu:latest as build
 
-#
-#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ARG DEBIAN_FRONTEND="noninteractive"
 ENV TZ=Europe/Moscow
 
@@ -22,15 +20,15 @@ WORKDIR /app/calculator/cmake-build-release
 RUN cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build .
 
 
-FROM ubuntu:latest
+#FROM ubuntu:latest
+#
+## Запускать незнакомое приложение под root'ом неприлично :)
+#RUN groupadd -r sample && useradd -r -g sample sample
+#USER sample
+#
+#WORKDIR /app/calculator
 
-# Запускать незнакомое приложение под root'ом неприлично :)
-RUN groupadd -r sample && useradd -r -g sample sample
-USER sample
-
-WORKDIR /app/calculator
-
-COPY --from=build /app/calculator/cmake-build-release/macro-fractal-calculator .
+#COPY --from=build /app/calculator/cmake-build-release/macro-fractal-calculator .
 
 # Установим точку входа
 CMD ["./macro-fractal-calculator"]
