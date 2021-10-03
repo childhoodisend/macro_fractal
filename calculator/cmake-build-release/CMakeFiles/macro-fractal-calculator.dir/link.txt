@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++11 -O3 -DNDEBUG -rdynamic CMakeFiles/macro-fractal-calculator.dir/main.cpp.o -o macro-fractal-calculator 
