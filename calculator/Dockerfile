@@ -1,10 +1,16 @@
-FROM gcc:latest as build
+FROM ubuntu:latest as build
+
+#
+#RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+ARG DEBIAN_FRONTEND="noninteractive"
+ENV TZ=Europe/Moscow
 
 # установка libboost-all-dev
-RUN  apt-get update && \
-        apt-get install -y \
-        cmake
+RUN apt-get update && apt-get install -y \
+        cmake \
+        libboost-all-dev
 
+RUN apt-get install -y build-essential # Dima told me that
 
 # Скопируем директорию /src в контейнер
 ADD . /app/calculator
