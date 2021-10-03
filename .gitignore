@@ -31,6 +31,8 @@
 *.out
 *.app
 
+.idea
+calculator/cmake-build-release
 
 ### Python template
 # Byte-compiled / optimized / DLL files
