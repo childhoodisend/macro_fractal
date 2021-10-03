@@ -1,8 +1,8 @@
+#include "boost/filesystem.hpp"
 #include <iostream>
 
-int main() {
+using namespace boost::filesystem;
 
-    std::cout << "Hello, Fractal World!" << std::endl;
-
-    return EXIT_SUCCESS;
+int main () {
+    create_directory( "foobar" );
 }
