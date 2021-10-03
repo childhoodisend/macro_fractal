@@ -14,6 +14,7 @@
 ###Весь стек:
 `docker compose up` - запустить\
 `docker compose up --build` - запустить с билдом
+
 ### Сервис calculator
 ```shell
 cd calculator
