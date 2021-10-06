@@ -3,8 +3,8 @@
 
 #pragma once
 
-#include "base_calculator.h"
-#include "calc_params.h"
+#include "../base_calculator.h"
+#include "../calc_params.h"
 
 #include <deque>
 #include <memory>
