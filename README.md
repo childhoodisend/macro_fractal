@@ -18,5 +18,5 @@
 ### Сервис calculator
 ```shell
 cd calculator
-./{скрипт??}
+bash build_and_run.sh
 ```
