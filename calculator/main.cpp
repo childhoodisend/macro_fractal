@@ -1,17 +1,12 @@
-#include "boost/filesystem.hpp"
-#include <iostream>
+#include "executors/mandelbrot_calculator.h"
 
-using namespace boost::filesystem;
+#include <memory>
+
+using namespace macro_fractal::calculator;
 
 int main () {
-    create_directory( "foobar" );
-    ofstream file( "foobar/cheeze" );
-    file << "tastes good!\n";
-    file.close();
-    if (!exists( "foobar/cheeze")) {
-        std::cout << "Something is rotten in foobar\n";
-    }
-    else {
-        std::cout << "tastes good!" << std::endl;
-    }
+    mandelbrot_calculator_ptr calc_ptr = std::make_unique<Mandelbrot_calculator>();
+
+
+    return EXIT_SUCCESS;
 }
